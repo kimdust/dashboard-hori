@@ -6,7 +6,7 @@ import { Container } from '@chakra-ui/react'
 
 const Home = () => {
     return (
-        <Layout title="home" showTitle={false}>
+        <>
             <MainSlide />
             <Section isLightBackground={true}>
                 <Container>
@@ -28,7 +28,19 @@ const Home = () => {
                     dolorem voluptatum saepe aut.
                 </Container>
             </Section>
-        </Layout>
+            <Section isLightBackground={true}>
+                <Container>
+                    <Title>회사 소개</Title>
+                    <TitleH4>사장님 말씀</TitleH4>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore qui magnam assumenda, adipisci iste
+                    sint provident tempore mollitia. Deserunt labore ipsa quod odit dolore animi repudiandae vero
+                    dolorum delectus similique?
+                    <TitleH4>사모님 말씀</TitleH4>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore qui magnam assumenda, adipisci iste
+                    sint
+                </Container>
+            </Section>
+        </>
     )
 }
 
