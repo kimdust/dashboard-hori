@@ -15,6 +15,23 @@ export const buttonStyles = {
                 },
             },
             variants: {
+                icon: () => ({
+                    w: '45px',
+                    h: '45px',
+                    minW: 'none',
+                    bg: 'transparent',
+                    color: 'gray.500',
+                    borderRadius: '50%',
+                    _focus: {
+                        bg: 'gray.100',
+                    },
+                    _active: {
+                        bg: 'gray.100',
+                    },
+                    _hover: {
+                        bg: 'gray.100',
+                    },
+                }),
                 link12: () => ({
                     height: '32px',
                     fontSize: '12px',
@@ -26,7 +43,7 @@ export const buttonStyles = {
                     borderRadius: '0',
                     bg: ['red', 'brand.200', 'brand.900', 'white'],
                     // color: ['white', null, null, 'brand.500'],
-                    color: { sm: 'white', lg: 'brand.500' },
+                    color: { base: 'white', lg: 'brand.500' },
                 }),
                 brand: (props) => ({
                     bg: mode('brand.500', 'brand.400')(props),
