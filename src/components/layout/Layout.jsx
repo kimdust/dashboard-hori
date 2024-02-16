@@ -17,6 +17,7 @@ const Layout = () => {
         pl={{ base: "12px", xl: 312 }}
         pr={{ base: "12px", xl: "12px" }}
         pt={{ base: 200, md: 140 }}
+        pb={{ base: 200, md: 5 }}
         transition={"all 0.2s"}
       >
         <Stack
@@ -27,11 +28,10 @@ const Layout = () => {
           top={"27px"}
           left={{ base: "12px", xl: "310px" }}
           right={"12px"}
-          // zIndex={100}
+          zIndex={100}
           py={2}
           px={{ base: 2, xl: 4 }}
           bg={"rgba(255, 255, 255, 0.1)"}
-          // </Box></Box>bg={'rgba(255, 0, 0, 0.1)'}
           backdropFilter={"blur(10px)"}
           borderRadius={"0.75rem"}
           transition={"all 0.2s"}
@@ -47,6 +47,7 @@ const Layout = () => {
                 {props.children} */}
         <Outlet />
       </Box>
+      <Footer flexGrow={1} transition={"all 0.2s"} />
     </Box>
   );
 };

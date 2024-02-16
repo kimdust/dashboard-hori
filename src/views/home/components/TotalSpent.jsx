@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Icon, Text } from "@chakra-ui/react";
 import {
   Card,

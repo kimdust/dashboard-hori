@@ -8,14 +8,15 @@ import {
   Td,
   Card,
   CardHeader,
-  Checkbox,
+  Box,
   Button,
   Icon,
+  Text,
 } from "@chakra-ui/react";
-import { tableDataCheck } from "../../../variables/tables";
+import { tableDataComplex } from "../../../variables/tables";
 import { MdOutlineMoreHoriz } from "react-icons/md";
 
-const CheckTable = () => {
+const ComplexTable = () => {
   return (
     <Card display={"flex"} flexDir={"column"} justify={"center"}>
       <CardHeader
@@ -25,7 +26,7 @@ const CheckTable = () => {
         flexDir={"row"}
         justify={"space-between"}
       >
-        Check Table
+        Complex Table
         <Button
           ms="auto"
           align="center"
@@ -41,24 +42,26 @@ const CheckTable = () => {
       </CardHeader>
       <TableContainer>
         <Table bg={"white"} borderRadius={"20px"}>
-          <Thead color="#A3AED0">
+          <Thead>
             <Tr>
               <Th>NAME</Th>
-              <Th>PROGRESS</Th>
-              <Th>QUANTITY</Th>
+              <Th>STATUS</Th>
               <Th>DATE</Th>
+              <Th>PROGRESS</Th>
             </Tr>
           </Thead>
           <Tbody>
-            {tableDataCheck.map((item, index) => (
+            {tableDataComplex.map((item, index) => (
               <Tr key={index}>
+                <Td>{item.name}</Td>
                 <Td>
-                  <Checkbox colorScheme="brandScheme" />
-                  {item.name}
+                  <Text display={"flex"} gap="5px">
+                    {item.icon}
+                    {item.status}
+                  </Text>
                 </Td>
-                <Td>{item.progress}</Td>
-                <Td>{item.quantity}</Td>
                 <Td>{item.date}</Td>
+                <Td>{item.progress}</Td>
               </Tr>
             ))}
           </Tbody>
@@ -68,4 +71,4 @@ const CheckTable = () => {
   );
 };
 
-export default CheckTable;
+export default ComplexTable;

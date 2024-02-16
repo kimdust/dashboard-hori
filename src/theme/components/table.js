@@ -4,14 +4,14 @@ export const tableStyles = {
     Table: {
       baseStyle: {
         thead: {
-          tr: {
-            color: "#A0AEC0",
+          th: {
+            color: "#A3AED0",
             borderBottom: "1px solid #E2E8F0",
             fontSize: "12px",
           },
         },
         tbody: {
-          tr: {
+          td: {
             color: "#1B2559",
             fontSize: "14px",
             fontWeight: "700",
@@ -21,16 +21,6 @@ export const tableStyles = {
           },
           label: {
             m: "3px 8px 3px 0",
-            _checked: {
-              span: {
-                bg: "primary",
-                border: "1px solid primary",
-                _hover: {
-                  bg: "primary",
-                  border: "1px solid primary",
-                },
-              },
-            },
           },
         },
       },

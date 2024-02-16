@@ -1,21 +1,20 @@
 import {
   TableContainer,
   Table,
-  Thead,
   Tbody,
   Tr,
-  Th,
   Td,
   Card,
   CardHeader,
   Checkbox,
   Button,
   Icon,
+  Box,
 } from "@chakra-ui/react";
-import { tableDataCheck } from "../../../variables/tables";
+import { tableDataTask } from "../../../variables/tables";
 import { MdOutlineMoreHoriz } from "react-icons/md";
 
-const CheckTable = () => {
+const Task = () => {
   return (
     <Card display={"flex"} flexDir={"column"} justify={"center"}>
       <CardHeader
@@ -25,7 +24,8 @@ const CheckTable = () => {
         flexDir={"row"}
         justify={"space-between"}
       >
-        Check Table
+        <Checkbox colorScheme="brandScheme" mr="10px" mb="3px" />
+        Task
         <Button
           ms="auto"
           align="center"
@@ -41,24 +41,18 @@ const CheckTable = () => {
       </CardHeader>
       <TableContainer>
         <Table bg={"white"} borderRadius={"20px"}>
-          <Thead color="#A3AED0">
-            <Tr>
-              <Th>NAME</Th>
-              <Th>PROGRESS</Th>
-              <Th>QUANTITY</Th>
-              <Th>DATE</Th>
-            </Tr>
-          </Thead>
           <Tbody>
-            {tableDataCheck.map((item, index) => (
+            {tableDataTask.map((item, index) => (
               <Tr key={index}>
                 <Td>
                   <Checkbox colorScheme="brandScheme" />
                   {item.name}
                 </Td>
-                <Td>{item.progress}</Td>
-                <Td>{item.quantity}</Td>
-                <Td>{item.date}</Td>
+                <Td p={"5px"}>
+                  <Box color="#A3AED0" padding={0}>
+                    {item.icon}
+                  </Box>
+                </Td>
               </Tr>
             ))}
           </Tbody>
@@ -68,4 +62,4 @@ const CheckTable = () => {
   );
 };
 
-export default CheckTable;
+export default Task;
